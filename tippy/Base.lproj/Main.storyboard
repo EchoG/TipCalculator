@@ -101,6 +101,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="OV1-0I-pLK" id="JVi-3O-Xsh"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="cJx-1I-TUY"/>
                         <outlet property="tipControl" destination="Qz2-1P-ZxS" id="2vv-1M-BWD"/>
                         <outlet property="tipLabel" destination="X2y-SI-UES" id="xTx-pJ-zl3"/>
                         <outlet property="totalLabel" destination="gpC-ga-dY3" id="wgy-XA-LFM"/>
@@ -215,6 +216,7 @@
                         <outlet property="percentage1" destination="cO7-Jg-g0S" id="dmr-FP-RDQ"/>
                         <outlet property="percentage2" destination="ARH-jq-d5V" id="WWQ-Ib-dSJ"/>
                         <outlet property="percentage3" destination="VK7-qs-E2e" id="kRd-0O-jDa"/>
+                        <outlet property="settingView" destination="RDI-qt-ni7" id="Dza-BU-Zfv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipK-fU-D1u" userLabel="First Responder" sceneMemberID="firstResponder"/>

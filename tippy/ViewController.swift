@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet var mainView: UIView!
     
     var tipPercentages = [0.18, 0.2, 0.25]
     var tipPercentages1 = 18.00
@@ -52,6 +53,14 @@ class ViewController: UIViewController {
         tipPercentages[2] = tipPercentages3*(0.01)
         
         calcuteTipsEveryTime()
+        
+        UIView.animateWithDuration(0.5, animations: {
+            // This causes first view to fade in and second view to fade out
+            //self.settingView.backgroundColor = UIColor.darkGrayColor()
+            self.mainView.alpha = 0.7
+            self.mainView.alpha = 1
+            
+        })
     }
     
     override func viewWillDisappear(animated: Bool) {

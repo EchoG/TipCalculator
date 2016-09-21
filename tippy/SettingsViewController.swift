@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet var settingView: UIView!
     var changeTipPercentages = [Double]()
     
     let defaults = NSUserDefaults.standardUserDefaults()
@@ -33,6 +34,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         let percentage1Double = changeTipPercentages[0]*100.00
         let percentage1Title = (NSString(format: "%.0f", percentage1Double) as String)
         percentage1.text = percentage1Title
@@ -45,8 +47,16 @@ class SettingsViewController: UIViewController {
         let percentage3Title = (NSString(format: "%.0f", percentage3Double) as String)
         percentage3.text = percentage3Title
         
+        UIView.animateWithDuration(0.5, animations: {
+            // This causes first view to fade in and second view to fade out
+            //self.settingView.backgroundColor = UIColor.darkGrayColor()
+            self.settingView.alpha = 0.7
+            self.settingView.alpha = 1
+            
+        })
+        
     }
-
+    
     @IBAction func OnTapSetting(sender: AnyObject) {
         view.endEditing(true)
     }
